@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gia English Studio</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <div class="app-shell">
+      <aside class="sidebar" aria-label="Learning navigation">
+        <div class="brand">
+          <div class="brand-mark" aria-hidden="true">GE</div>
+          <div>
+            <p class="eyebrow">Daily English</p>
+            <h1>Gia English Studio</h1>
+          </div>
+        </div>
+
+        <nav class="nav-list" aria-label="Sections">
+          <button class="nav-button active" data-target="dashboard">
+            <span class="nav-icon" aria-hidden="true">D</span>
+            Dashboard
+          </button>
+          <button class="nav-button" data-target="practice">
+            <span class="nav-icon" aria-hidden="true">P</span>
+            Practice
+          </button>
+          <button class="nav-button" data-target="journal">
+            <span class="nav-icon" aria-hidden="true">J</span>
+            Journal
+          </button>
+          <button class="nav-button" data-target="progress">
+            <span class="nav-icon" aria-hidden="true">R</span>
+            Progress
+          </button>
+        </nav>
+
+        <section class="sidebar-panel">
+          <p class="panel-label">Today</p>
+          <div class="streak-line">
+            <strong id="streakCount">0</strong>
+            <span>day streak</span>
+          </div>
+          <div class="small-progress" aria-label="Daily progress">
+            <span id="sideProgressBar"></span>
+          </div>
+          <p id="sideProgressText" class="muted">0 of 6 skills complete</p>
+        </section>
+      </aside>
+
+      <main class="main">
+        <section class="view active" id="dashboard" aria-labelledby="dashboardTitle">
+          <div class="topbar">
+            <div>
+              <p class="eyebrow">Your 1-2 hour plan</p>
+              <h2 id="dashboardTitle">Learn all English skills every day</h2>
+            </div>
+            <div class="date-pill" id="todayLabel"></div>
+          </div>
+
+          <section class="hero-band">
+            <div class="hero-copy">
+              <p class="eyebrow">Balanced practice</p>
+              <h3>One calm session, six skills, steady progress.</h3>
+              <p>Choose the time you have today and follow the blocks. Short days stay focused; longer days add deeper practice.</p>
+            </div>
+            <div class="learning-map" aria-label="Six English skills">
+              <span>Listening</span>
+              <span>Speaking</span>
+              <span>Reading</span>
+              <span>Writing</span>
+              <span>Vocabulary</span>
+              <span>Grammar</span>
+            </div>
+          </section>
+
+          <section class="controls-row" aria-label="Daily setup">
+            <div class="control-group">
+              <label for="dailyMinutes">Daily time</label>
+              <select id="dailyMinutes">
+                <option value="60">1 hour</option>
+                <option value="90" selected>1.5 hours</option>
+                <option value="120">2 hours</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label for="levelSelect">Level</label>
+              <select id="levelSelect">
+                <option value="beginner">Beginner</option>
+                <option value="intermediate" selected>Intermediate</option>
+                <option value="advanced">Advanced</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label for="lessonSource">Lessons</label>
+              <select id="lessonSource">
+                <option value="online" selected>Online daily</option>
+                <option value="offline">Offline examples</option>
+              </select>
+            </div>
+            <div class="control-group">
+              <label for="topicSelect">Topic</label>
+              <select id="topicSelect"></select>
+            </div>
+            <button class="primary-action" id="startSessionButton">Start today's session</button>
+          </section>
+          <p class="api-status" id="apiStatus" role="status"></p>
+
+          <section class="section-heading">
+            <div>
+              <p class="eyebrow">Session blocks</p>
+              <h3>Today's learning route</h3>
+            </div>
+            <p id="routeSummary" class="muted"></p>
+          </section>
+
+          <div class="skill-grid" id="skillGrid"></div>
+        </section>
+
+        <section class="view" id="practice" aria-labelledby="practiceTitle">
+          <div class="topbar">
+            <div>
+              <p class="eyebrow">Guided exercises</p>
+              <h2 id="practiceTitle">Practice room</h2>
+            </div>
+            <div class="topbar-actions">
+              <button class="secondary-action" id="onlineLessonButton">Fresh online lesson</button>
+              <button class="secondary-action" id="newSetButton">New exercise set</button>
+            </div>
+          </div>
+
+          <div class="practice-layout">
+            <section class="practice-card" id="vocabularyCard">
+              <div class="card-head">
+                <p class="eyebrow">Vocabulary</p>
+                <button class="tiny-button" id="saveWordButton" title="Save this word">Save</button>
+              </div>
+              <h3 id="wordTitle"></h3>
+              <p id="wordMeaning"></p>
+              <p id="wordExample" class="example-line"></p>
+              <div class="button-row">
+                <button class="secondary-action" id="prevWordButton">Previous</button>
+                <button class="primary-action" id="nextWordButton">Next word</button>
+              </div>
+            </section>
+
+            <section class="practice-card">
+              <div class="card-head">
+                <p class="eyebrow">Listening</p>
+                <button class="tiny-button" id="speakPassageButton" title="Play the passage">Play</button>
+              </div>
+              <p id="listeningText" class="passage"></p>
+              <fieldset class="quiz-options" id="listeningOptions"></fieldset>
+              <p class="feedback" id="listeningFeedback"></p>
+            </section>
+
+            <section class="practice-card">
+              <div class="card-head">
+                <p class="eyebrow">Speaking</p>
+                <button class="tiny-button" id="speechButton" title="Try speech recognition">Speak</button>
+              </div>
+              <h3 id="speakingPrompt"></h3>
+              <textarea id="speechTranscript" rows="5" placeholder="Speak or type your answer here."></textarea>
+              <div class="checklist">
+                <label><input type="checkbox" class="speech-check"> I used full sentences.</label>
+                <label><input type="checkbox" class="speech-check"> I gave one reason.</label>
+                <label><input type="checkbox" class="speech-check"> I corrected one mistake.</label>
+              </div>
+            </section>
+
+            <section class="practice-card">
+              <div class="card-head">
+                <p class="eyebrow">Reading</p>
+                <button class="tiny-button" id="showReadingAnswerButton" title="Check answer">Check</button>
+              </div>
+              <p id="readingText" class="passage"></p>
+              <label class="input-label" for="readingAnswer">What is the main idea?</label>
+              <input id="readingAnswer" type="text" placeholder="Write one sentence.">
+              <p class="feedback" id="readingFeedback"></p>
+            </section>
+
+            <section class="practice-card">
+              <div class="card-head">
+                <p class="eyebrow">Grammar</p>
+                <button class="tiny-button" id="checkGrammarButton" title="Check grammar">Check</button>
+              </div>
+              <p id="grammarQuestion" class="question-line"></p>
+              <input id="grammarAnswer" type="text" placeholder="Type the corrected sentence.">
+              <p class="feedback" id="grammarFeedback"></p>
+            </section>
+
+            <section class="practice-card wide-card">
+              <div class="card-head">
+                <p class="eyebrow">Writing</p>
+                <span id="wordCount" class="muted">0 words</span>
+              </div>
+              <h3 id="writingPrompt"></h3>
+              <textarea id="writingBox" rows="9" placeholder="Write a short answer. Aim for clear, simple sentences first."></textarea>
+              <div class="button-row">
+                <button class="secondary-action" id="saveWritingButton">Save writing</button>
+                <button class="primary-action" id="completePracticeButton">Mark practice complete</button>
+              </div>
+            </section>
+          </div>
+        </section>
+
+        <section class="view" id="journal" aria-labelledby="journalTitle">
+          <div class="topbar">
+            <div>
+              <p class="eyebrow">Writing habit</p>
+              <h2 id="journalTitle">Learning journal</h2>
+            </div>
+            <button class="primary-action" id="saveJournalButton">Save entry</button>
+          </div>
+          <section class="journal-wrap">
+            <div class="journal-prompts">
+              <p class="panel-label">Try one today</p>
+              <button class="prompt-button">What did I learn today?</button>
+              <button class="prompt-button">Describe one problem and how I solved it.</button>
+              <button class="prompt-button">Write five sentences about tomorrow.</button>
+              <button class="prompt-button">Explain a topic I like in simple English.</button>
+            </div>
+            <div class="journal-editor">
+              <label for="journalEntry">Today's journal</label>
+              <textarea id="journalEntry" rows="15" placeholder="Write freely. Mistakes are useful here."></textarea>
+              <p id="journalStatus" class="feedback"></p>
+            </div>
+          </section>
+        </section>
+
+        <section class="view" id="progress" aria-labelledby="progressTitle">
+          <div class="topbar">
+            <div>
+              <p class="eyebrow">Review and momentum</p>
+              <h2 id="progressTitle">Progress</h2>
+            </div>
+            <button class="secondary-action" id="resetTodayButton">Reset today</button>
+          </div>
+
+          <div class="progress-grid">
+            <section class="metric-card">
+              <p class="panel-label">Today</p>
+              <strong id="todayMinutes">0</strong>
+              <span>minutes planned</span>
+            </section>
+            <section class="metric-card">
+              <p class="panel-label">Completed</p>
+              <strong id="completedSkills">0/6</strong>
+              <span>skills</span>
+            </section>
+            <section class="metric-card">
+              <p class="panel-label">Saved words</p>
+              <strong id="savedWordCount">0</strong>
+              <span>for review</span>
+            </section>
+          </div>
+
+          <section class="saved-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Review deck</p>
+                <h3>Saved vocabulary</h3>
+              </div>
+            </div>
+            <div id="savedWords" class="saved-words"></div>
+          </section>
+
+          <section class="saved-section">
+            <div class="section-heading">
+              <div>
+                <p class="eyebrow">Recent writing</p>
+                <h3>Your last journal entries</h3>
+              </div>
+            </div>
+            <div id="journalList" class="journal-list"></div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
