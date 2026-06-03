@@ -291,7 +291,7 @@ h3 {
 
 .controls-row {
   display: grid;
-  grid-template-columns: repeat(4, minmax(145px, 1fr)) minmax(170px, 240px);
+  grid-template-columns: repeat(5, minmax(132px, 1fr)) minmax(170px, 230px);
   gap: 12px;
   align-items: end;
   margin-bottom: 28px;

@@ -171,6 +171,87 @@ const exerciseSets = [
   }
 ];
 
+const vietnameseExerciseSets = [
+  {
+    words: [
+      {
+        word: "kiên trì",
+        meaning: "continuing to do something even when it is difficult",
+        example: "Tôi học tiếng Việt mỗi ngày vì tôi muốn kiên trì hơn."
+      },
+      {
+        word: "cải thiện",
+        meaning: "to make something better",
+        example: "Tôi muốn cải thiện phát âm và vốn từ vựng."
+      },
+      {
+        word: "thói quen",
+        meaning: "a regular habit or routine",
+        example: "Một thói quen nhỏ mỗi ngày có thể giúp bạn tiến bộ."
+      }
+    ],
+    listening: {
+      text: "Lan học tiếng Việt ba mươi phút mỗi buổi sáng. Cô ấy nghe một đoạn ngắn, đọc lại vài câu, rồi viết ba câu về ngày của mình. Lan không học quá lâu, nhưng cô ấy học đều đặn.",
+      question: "Ý chính là gì?",
+      options: [
+        "Lan tiến bộ nhờ một thói quen học đều đặn.",
+        "Lan chỉ học ngữ pháp vào buổi tối.",
+        "Lan không thích học tiếng Việt."
+      ],
+      answer: 0
+    },
+    speaking: "Hãy nói về một ngày bình thường của bạn bằng tiếng Việt. Thêm một điều bạn muốn cải thiện.",
+    reading: {
+      text: "Một kế hoạch học tốt không cần quá phức tạp. Kế hoạch đó nên dễ lặp lại, có đủ kỹ năng khác nhau, và linh hoạt khi bạn bận. Điều quan trọng nhất là quay lại học vào ngày hôm sau.",
+      answer: "Kế hoạch học tốt nên đơn giản, cân bằng, linh hoạt và dễ lặp lại."
+    },
+    grammar: {
+      question: "Sửa câu này: Tôi là học tiếng Việt mỗi ngày.",
+      answer: "Tôi học tiếng Việt mỗi ngày."
+    },
+    writing: "Viết 80-120 từ về lý do bạn muốn học tiếng Việt và tiếng Việt có thể giúp cuộc sống của bạn như thế nào."
+  },
+  {
+    words: [
+      {
+        word: "tự tin",
+        meaning: "feeling sure about your ability",
+        example: "Tôi tự tin hơn khi luyện nói mỗi ngày."
+      },
+      {
+        word: "thử thách",
+        meaning: "a difficult task that helps you grow",
+        example: "Nghe người bản xứ nói nhanh là một thử thách."
+      },
+      {
+        word: "giải thích",
+        meaning: "to make something clear",
+        example: "Bạn có thể giải thích ý kiến của mình bằng hai câu không?"
+      }
+    ],
+    listening: {
+      text: "Minh hơi lo lắng khi nói tiếng Việt với người mới. Anh ấy bắt đầu ghi âm câu trả lời ngắn trên điện thoại. Sau hai tuần, Minh nghe lại và nhận thấy mình nói rõ hơn.",
+      question: "Điều gì giúp Minh tiến bộ?",
+      options: [
+        "Ghi âm các câu trả lời ngắn.",
+        "Tránh nói chuyện với người khác.",
+        "Chỉ học một cuốn sách ngữ pháp."
+      ],
+      answer: 0
+    },
+    speaking: "Hãy nói về một thử thách gần đây. Chuyện gì đã xảy ra, và bạn học được gì?",
+    reading: {
+      text: "Luyện nói có thể khó lúc đầu vì bạn cần chọn từ nhanh, sắp xếp ý tưởng và chấp nhận lỗi nhỏ. Cảm giác không thoải mái là bình thường, và đó thường là dấu hiệu bạn đang học.",
+      answer: "Luyện nói khó vì phải dùng ngôn ngữ chủ động, nhưng cảm giác khó chịu là bình thường và có ích."
+    },
+    grammar: {
+      question: "Sửa câu này: Tôi có rất nhiều những thông tin về khóa học này.",
+      answer: "Tôi có nhiều thông tin về khóa học này."
+    },
+    writing: "Viết một tin nhắn ngắn để hỏi giáo viên hoặc bạn bè lời khuyên về cách cải thiện tiếng Việt."
+  }
+];
+
 const lessonTopics = [
   { id: "daily", label: "Daily mix", query: "daily life", wikiTitle: "" },
   { id: "communication", label: "Communication", query: "communication", wikiTitle: "Communication" },
@@ -183,6 +264,20 @@ const lessonTopics = [
   { id: "education", label: "Education", query: "education", wikiTitle: "Education" },
   { id: "environment", label: "Environment", query: "environment", wikiTitle: "Natural_environment" },
   { id: "surprise", label: "Surprise article", query: "learning", wikiTitle: "random" }
+];
+
+const vietnameseLessonTopics = [
+  { id: "daily", label: "Daily mix", query: "đời sống", wikiTitle: "" },
+  { id: "communication", label: "Giao tiếp", query: "giao tiếp", wikiTitle: "Giao_tiếp" },
+  { id: "travel", label: "Du lịch", query: "du lịch", wikiTitle: "Du_lịch" },
+  { id: "food", label: "Ẩm thực", query: "ẩm thực", wikiTitle: "Ẩm_thực" },
+  { id: "work", label: "Công việc", query: "công việc", wikiTitle: "Việc_làm" },
+  { id: "health", label: "Sức khỏe", query: "sức khỏe", wikiTitle: "Sức_khỏe" },
+  { id: "technology", label: "Công nghệ", query: "công nghệ", wikiTitle: "Công_nghệ" },
+  { id: "culture", label: "Văn hóa", query: "văn hóa", wikiTitle: "Văn_hóa" },
+  { id: "education", label: "Giáo dục", query: "giáo dục", wikiTitle: "Giáo_dục" },
+  { id: "environment", label: "Môi trường", query: "môi trường", wikiTitle: "Môi_trường_tự_nhiên" },
+  { id: "surprise", label: "Bài bất ngờ", query: "học tập", wikiTitle: "random" }
 ];
 
 const grammarTemplates = [
@@ -208,13 +303,131 @@ const grammarTemplates = [
   }
 ];
 
+const vietnameseGrammarTemplates = [
+  {
+    question: "Sửa câu này: Tôi là học tiếng Việt mỗi ngày.",
+    answer: "Tôi học tiếng Việt mỗi ngày."
+  },
+  {
+    question: "Sửa câu này: Cô ấy là rất thích nghe nhạc Việt Nam.",
+    answer: "Cô ấy rất thích nghe nhạc Việt Nam."
+  },
+  {
+    question: "Sửa câu này: Hôm qua tôi đi đến chợ mua rau.",
+    answer: "Hôm qua tôi đi chợ mua rau."
+  },
+  {
+    question: "Sửa câu này: Tôi muốn nói tiếng Việt tốt hơn nhiều.",
+    answer: "Tôi muốn nói tiếng Việt tốt hơn."
+  },
+  {
+    question: "Sửa câu này: Anh ấy đang đọc sách ở trong thư viện.",
+    answer: "Anh ấy đang đọc sách trong thư viện."
+  }
+];
+
+const vietnameseWordBank = {
+  communication: [
+    ["giao tiếp", "communication", "Giao tiếp tốt giúp cuộc trò chuyện tự nhiên hơn."],
+    ["lắng nghe", "to listen carefully", "Khi học ngôn ngữ, lắng nghe rất quan trọng."],
+    ["diễn đạt", "to express an idea", "Tôi muốn diễn đạt ý kiến rõ ràng hơn."]
+  ],
+  travel: [
+    ["hành trình", "journey or trip", "Hành trình này giúp tôi hiểu thêm về văn hóa Việt Nam."],
+    ["địa điểm", "place or location", "Đà Nẵng là một địa điểm du lịch nổi tiếng."],
+    ["khám phá", "to explore", "Tôi muốn khám phá nhiều thành phố mới."]
+  ],
+  food: [
+    ["món ăn", "dish or food item", "Phở là một món ăn quen thuộc ở Việt Nam."],
+    ["hương vị", "flavor", "Món này có hương vị rất đặc biệt."],
+    ["nguyên liệu", "ingredient", "Rau thơm là nguyên liệu quan trọng trong nhiều món Việt."]
+  ],
+  work: [
+    ["công việc", "work or job", "Công việc hôm nay khá bận nhưng thú vị."],
+    ["kỹ năng", "skill", "Kỹ năng giao tiếp giúp tôi làm việc tốt hơn."],
+    ["cuộc họp", "meeting", "Cuộc họp bắt đầu lúc chín giờ sáng."]
+  ],
+  health: [
+    ["sức khỏe", "health", "Sức khỏe tốt giúp bạn học tập hiệu quả hơn."],
+    ["nghỉ ngơi", "to rest", "Sau khi học, bạn nên nghỉ ngơi một chút."],
+    ["thói quen", "habit", "Thói quen ngủ đủ rất quan trọng."]
+  ],
+  technology: [
+    ["công nghệ", "technology", "Công nghệ giúp việc học ngôn ngữ dễ hơn."],
+    ["ứng dụng", "application or app", "Tôi dùng một ứng dụng để luyện từ vựng."],
+    ["thiết bị", "device", "Điện thoại là thiết bị tôi dùng mỗi ngày."]
+  ],
+  culture: [
+    ["văn hóa", "culture", "Văn hóa Việt Nam rất đa dạng."],
+    ["truyền thống", "tradition", "Tết là một truyền thống quan trọng."],
+    ["lễ hội", "festival", "Lễ hội này có nhiều hoạt động thú vị."]
+  ],
+  education: [
+    ["giáo dục", "education", "Giáo dục mở ra nhiều cơ hội mới."],
+    ["bài học", "lesson", "Bài học hôm nay khá hữu ích."],
+    ["kiến thức", "knowledge", "Tôi muốn mở rộng kiến thức của mình."]
+  ],
+  environment: [
+    ["môi trường", "environment", "Chúng ta cần bảo vệ môi trường."],
+    ["thiên nhiên", "nature", "Tôi thích đi bộ trong thiên nhiên."],
+    ["bền vững", "sustainable", "Lối sống bền vững giúp giảm rác thải."]
+  ],
+  daily: [
+    ["hằng ngày", "daily", "Tôi luyện nghe hằng ngày."],
+    ["gia đình", "family", "Gia đình tôi thường ăn tối cùng nhau."],
+    ["thời gian", "time", "Tôi cần quản lý thời gian tốt hơn."]
+  ],
+  surprise: [
+    ["chủ đề", "topic", "Chủ đề hôm nay rất mới với tôi."],
+    ["ý tưởng", "idea", "Tôi viết ba ý tưởng sau khi đọc."],
+    ["tóm tắt", "summary", "Tôi viết một tóm tắt ngắn bằng tiếng Việt."]
+  ]
+};
+
+const languageConfigs = {
+  english: {
+    name: "English",
+    mark: "EN",
+    brandEyebrow: "Daily English",
+    title: "Gia English Studio",
+    dashboardTitle: "Learn all English skills every day",
+    heroTitle: "One calm session, six skills, steady progress.",
+    heroText: "Choose the time you have today and follow the blocks. Short days stay focused; longer days add deeper practice.",
+    speechLang: "en-US",
+    wikiHost: "en.wikipedia.org",
+    topics: lessonTopics,
+    offlineSets: exerciseSets,
+    grammarTemplates,
+    apiLabel: "public English APIs",
+    useDictionaryApi: true
+  },
+  vietnamese: {
+    name: "Vietnamese",
+    mark: "VI",
+    brandEyebrow: "Daily Vietnamese",
+    title: "Gia Vietnamese Studio",
+    dashboardTitle: "Learn all Vietnamese skills every day",
+    heroTitle: "One balanced Vietnamese session, every day.",
+    heroText: "Practice listening, speaking, reading, writing, vocabulary, and grammar with Vietnamese topics that can refresh online.",
+    speechLang: "vi-VN",
+    wikiHost: "vi.wikipedia.org",
+    topics: vietnameseLessonTopics,
+    offlineSets: vietnameseExerciseSets,
+    grammarTemplates: vietnameseGrammarTemplates,
+    apiLabel: "Vietnamese Wikipedia plus built-in Vietnamese practice",
+    useDictionaryApi: false
+  }
+};
+
 const defaultState = {
   minutes: 90,
   level: "intermediate",
+  targetLanguage: "english",
   lessonSource: "online",
   topic: "daily",
   dynamicSet: null,
   dynamicSetDate: "",
+  dynamicSetLanguage: "",
   completedByDate: {},
   savedWords: [],
   journals: [],
@@ -230,6 +443,12 @@ const elements = {
   navButtons: document.querySelectorAll(".nav-button"),
   views: document.querySelectorAll(".view"),
   todayLabel: document.getElementById("todayLabel"),
+  brandMark: document.getElementById("brandMark"),
+  brandEyebrow: document.getElementById("brandEyebrow"),
+  brandTitle: document.getElementById("brandTitle"),
+  heroTitle: document.getElementById("heroTitle"),
+  heroText: document.getElementById("heroText"),
+  targetLanguage: document.getElementById("targetLanguage"),
   dailyMinutes: document.getElementById("dailyMinutes"),
   levelSelect: document.getElementById("levelSelect"),
   lessonSource: document.getElementById("lessonSource"),
@@ -290,8 +509,10 @@ function init() {
     day: "numeric"
   }).format(new Date());
 
-  populateTopics();
   normalizeSavedSettings();
+  updateLanguageCopy();
+  populateTopics();
+  elements.targetLanguage.value = state.targetLanguage;
   elements.dailyMinutes.value = String(state.minutes);
   elements.levelSelect.value = state.level;
   elements.lessonSource.value = state.lessonSource;
@@ -303,11 +524,15 @@ function init() {
 }
 
 function normalizeSavedSettings() {
+  if (!languageConfigs[state.targetLanguage]) {
+    state.targetLanguage = "english";
+  }
+
   if (!["online", "offline"].includes(state.lessonSource)) {
     state.lessonSource = "online";
   }
 
-  if (!lessonTopics.some((topic) => topic.id === state.topic)) {
+  if (!getLanguageConfig().topics.some((topic) => topic.id === state.topic)) {
     state.topic = "daily";
   }
 
@@ -316,9 +541,37 @@ function normalizeSavedSettings() {
   }
 }
 
+function getLanguageConfig() {
+  return languageConfigs[state.targetLanguage] || languageConfigs.english;
+}
+
+function updateLanguageCopy() {
+  const config = getLanguageConfig();
+  document.title = config.title;
+  elements.brandMark.textContent = config.mark;
+  elements.brandEyebrow.textContent = config.brandEyebrow;
+  elements.brandTitle.textContent = config.title;
+  elements.dashboardTitle.textContent = config.dashboardTitle;
+  elements.heroTitle.textContent = config.heroTitle;
+  elements.heroText.textContent = config.heroText;
+}
+
 function bindEvents() {
   elements.navButtons.forEach((button) => {
     button.addEventListener("click", () => showView(button.dataset.target));
+  });
+
+  elements.targetLanguage.addEventListener("change", () => {
+    state.targetLanguage = elements.targetLanguage.value;
+    state.topic = "daily";
+    state.dynamicSet = null;
+    state.dynamicSetDate = "";
+    state.dynamicSetLanguage = "";
+    updateLanguageCopy();
+    populateTopics();
+    elements.topicSelect.value = state.topic;
+    persistAndRender();
+    loadDailyOnlineLesson(true);
   });
 
   elements.dailyMinutes.addEventListener("change", () => {
@@ -381,7 +634,7 @@ function renderAll() {
 }
 
 function populateTopics() {
-  elements.topicSelect.innerHTML = lessonTopics
+  elements.topicSelect.innerHTML = getLanguageConfig().topics
     .map((topic) => `<option value="${topic.id}">${topic.label}</option>`)
     .join("");
 }
@@ -390,7 +643,7 @@ function renderSkillGrid() {
   const plan = minutePlans[state.minutes];
   const completed = getCompletedSet();
   const sourceLabel = state.lessonSource === "online" ? "online daily lessons" : "offline examples";
-  elements.routeSummary.textContent = `${state.minutes} minutes planned at ${state.level} level with ${sourceLabel}`;
+  elements.routeSummary.textContent = `${state.minutes} minutes planned for ${getLanguageConfig().name} at ${state.level} level with ${sourceLabel}`;
 
   elements.skillGrid.innerHTML = skills
     .map((skill) => {
@@ -497,11 +750,12 @@ function renderProgress() {
 }
 
 function getActiveSet() {
-  if (state.lessonSource === "online" && state.dynamicSet) {
+  if (state.lessonSource === "online" && state.dynamicSet && state.dynamicSetLanguage === state.targetLanguage) {
     return state.dynamicSet;
   }
 
-  return exerciseSets[state.currentSet];
+  const offlineSets = getLanguageConfig().offlineSets;
+  return offlineSets[state.currentSet % offlineSets.length];
 }
 
 function loadDailyOnlineLesson(force = false) {
@@ -510,7 +764,7 @@ function loadDailyOnlineLesson(force = false) {
     return;
   }
 
-  if (!force && state.dynamicSet && state.dynamicSetDate === todayKey) {
+  if (!force && state.dynamicSet && state.dynamicSetDate === todayKey && state.dynamicSetLanguage === state.targetLanguage) {
     setApiStatus(`Today's online lesson is ready: ${state.dynamicSet.topicLabel}.`);
     return;
   }
@@ -539,10 +793,11 @@ async function loadFreshOnlineLesson(force = false) {
     const lesson = buildOnlineLesson(topic, reading, words);
     state.dynamicSet = lesson;
     state.dynamicSetDate = todayKey;
+    state.dynamicSetLanguage = state.targetLanguage;
     state.currentWord = 0;
     saveState();
     renderAll();
-    setApiStatus(`Online lesson loaded from public APIs: ${lesson.topicLabel}.`);
+    setApiStatus(`Online lesson loaded from ${getLanguageConfig().apiLabel}: ${lesson.topicLabel}.`);
   } catch {
     setApiStatus("The online lesson could not load, so the app is using saved examples.");
   } finally {
@@ -553,10 +808,10 @@ async function loadFreshOnlineLesson(force = false) {
 
 function selectTopic(force) {
   if (state.topic !== "daily") {
-    return lessonTopics.find((topic) => topic.id === state.topic) || lessonTopics[0];
+    return getLanguageConfig().topics.find((topic) => topic.id === state.topic) || getLanguageConfig().topics[0];
   }
 
-  const pool = lessonTopics.filter((topic) => topic.id !== "daily");
+  const pool = getLanguageConfig().topics.filter((topic) => topic.id !== "daily");
   const seed = force ? Date.now() : hashString(todayKey);
   return pool[seed % pool.length];
 }
@@ -566,7 +821,7 @@ async function fetchReadingPassage(topic) {
     topic.wikiTitle === "random"
       ? "random/summary"
       : `summary/${encodeURIComponent(topic.wikiTitle || topic.query)}`;
-  const response = await fetch(`https://en.wikipedia.org/api/rest_v1/page/${wikiPath}`);
+  const response = await fetch(`https://${getLanguageConfig().wikiHost}/api/rest_v1/page/${wikiPath}`);
 
   if (!response.ok) {
     throw new Error("Wikipedia summary request failed.");
@@ -586,6 +841,10 @@ async function fetchReadingPassage(topic) {
 }
 
 async function fetchVocabularyWords(topic) {
+  if (state.targetLanguage === "vietnamese") {
+    return vietnameseWordsForTopic(topic);
+  }
+
   const datamuseUrl = `https://api.datamuse.com/words?topics=${encodeURIComponent(topic.query)}&md=d&max=24`;
   const response = await fetch(datamuseUrl);
 
@@ -650,6 +909,10 @@ function wordFromDatamuse(candidate, topic) {
 }
 
 function fallbackWords(topic) {
+  if (state.targetLanguage === "vietnamese") {
+    return vietnameseWordsForTopic(topic);
+  }
+
   return [
     {
       word: "context",
@@ -670,6 +933,10 @@ function fallbackWords(topic) {
 }
 
 function buildOnlineLesson(topic, reading, words) {
+  if (state.targetLanguage === "vietnamese") {
+    return buildVietnameseOnlineLesson(topic, reading, words);
+  }
+
   const title = reading.title || topic.label;
   const grammar = grammarTemplates[hashString(`${todayKey}-${title}`) % grammarTemplates.length];
   const mainIdea = `The passage gives basic information about ${title}.`;
@@ -697,20 +964,57 @@ function buildOnlineLesson(topic, reading, words) {
   };
 }
 
+function vietnameseWordsForTopic(topic) {
+  const bank = vietnameseWordBank[topic.id] || vietnameseWordBank.daily;
+  return bank.map(([word, meaning, example]) => ({ word, meaning, example }));
+}
+
+function buildVietnameseOnlineLesson(topic, reading, words) {
+  const title = reading.title || topic.label;
+  const grammar = vietnameseGrammarTemplates[hashString(`${todayKey}-${title}`) % vietnameseGrammarTemplates.length];
+  const mainIdea = `Đoạn văn cung cấp thông tin cơ bản về ${title}.`;
+
+  return {
+    topicLabel: title,
+    words,
+    listening: {
+      text: reading.text,
+      question: "Ý chính là gì?",
+      options: [
+        mainIdea,
+        "Đoạn văn chủ yếu là nhật ký cá nhân về ngày hôm qua.",
+        "Đoạn văn chủ yếu hướng dẫn nấu ăn từng bước."
+      ],
+      answer: 0
+    },
+    speaking: `Hãy giải thích ${title} trong một phút. Nói một sự thật và một ý kiến của bạn.`,
+    reading: {
+      text: reading.text,
+      answer: mainIdea
+    },
+    grammar,
+    writing: `Viết 90-130 từ bằng tiếng Việt về ${title}. Trình bày ý chính, sau đó thêm ý kiến của bạn.`
+  };
+}
+
 function toggleSkill(skillId) {
   const completed = getCompletedSet();
   completed.has(skillId) ? completed.delete(skillId) : completed.add(skillId);
-  state.completedByDate[todayKey] = Array.from(completed);
+  state.completedByDate[getCompletionKey()] = Array.from(completed);
   updateStreak();
   persistAndRender();
 }
 
 function getCompletedSet() {
-  return new Set(state.completedByDate[todayKey] || []);
+  return new Set(state.completedByDate[getCompletionKey()] || []);
+}
+
+function getCompletionKey() {
+  return `${todayKey}:${state.targetLanguage}`;
 }
 
 function completePractice() {
-  state.completedByDate[todayKey] = Array.from(new Set([...getCompletedSet(), ...skills.map((skill) => skill.id)]));
+  state.completedByDate[getCompletionKey()] = Array.from(new Set([...getCompletedSet(), ...skills.map((skill) => skill.id)]));
   updateStreak();
   persistAndRender();
   showView("progress");
@@ -735,7 +1039,7 @@ function nextExerciseSet() {
     return;
   }
 
-  state.currentSet = (state.currentSet + 1) % exerciseSets.length;
+  state.currentSet = (state.currentSet + 1) % getLanguageConfig().offlineSets.length;
   state.currentWord = 0;
   persistAndRender();
 }
@@ -766,7 +1070,7 @@ function speakListeningText() {
   }
 
   const utterance = new SpeechSynthesisUtterance(getActiveSet().listening.text);
-  utterance.lang = "en-US";
+  utterance.lang = getLanguageConfig().speechLang;
   utterance.rate = state.level === "beginner" ? 0.82 : state.level === "advanced" ? 1 : 0.92;
   window.speechSynthesis.cancel();
   window.speechSynthesis.speak(utterance);
@@ -788,7 +1092,7 @@ function startSpeechRecognition() {
   }
 
   const recognition = new SpeechRecognition();
-  recognition.lang = "en-US";
+  recognition.lang = getLanguageConfig().speechLang;
   recognition.interimResults = false;
   recognition.maxAlternatives = 1;
   elements.speechButton.textContent = "Listening";
@@ -851,7 +1155,7 @@ function saveJournal() {
 }
 
 function resetToday() {
-  state.completedByDate[todayKey] = [];
+  state.completedByDate[getCompletionKey()] = [];
   if (state.lastCompletedDate === todayKey) {
     state.lastCompletedDate = "";
     state.streak = Math.max(0, state.streak - 1);

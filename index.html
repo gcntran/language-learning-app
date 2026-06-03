@@ -3,17 +3,17 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Gia English Studio</title>
+    <title>Gia Language Studio</title>
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <div class="app-shell">
       <aside class="sidebar" aria-label="Learning navigation">
         <div class="brand">
-          <div class="brand-mark" aria-hidden="true">GE</div>
+          <div class="brand-mark" aria-hidden="true" id="brandMark">GL</div>
           <div>
-            <p class="eyebrow">Daily English</p>
-            <h1>Gia English Studio</h1>
+            <p class="eyebrow" id="brandEyebrow">Daily language</p>
+            <h1 id="brandTitle">Gia Language Studio</h1>
           </div>
         </div>
 
@@ -54,7 +54,7 @@
           <div class="topbar">
             <div>
               <p class="eyebrow">Your 1-2 hour plan</p>
-              <h2 id="dashboardTitle">Learn all English skills every day</h2>
+              <h2 id="dashboardTitle">Learn every day</h2>
             </div>
             <div class="date-pill" id="todayLabel"></div>
           </div>
@@ -62,8 +62,8 @@
           <section class="hero-band">
             <div class="hero-copy">
               <p class="eyebrow">Balanced practice</p>
-              <h3>One calm session, six skills, steady progress.</h3>
-              <p>Choose the time you have today and follow the blocks. Short days stay focused; longer days add deeper practice.</p>
+              <h3 id="heroTitle">One calm session, six skills, steady progress.</h3>
+              <p id="heroText">Choose the time you have today and follow the blocks. Short days stay focused; longer days add deeper practice.</p>
             </div>
             <div class="learning-map" aria-label="Six English skills">
               <span>Listening</span>
@@ -76,6 +76,13 @@
           </section>
 
           <section class="controls-row" aria-label="Daily setup">
+            <div class="control-group">
+              <label for="targetLanguage">Language</label>
+              <select id="targetLanguage">
+                <option value="english" selected>English</option>
+                <option value="vietnamese">Vietnamese</option>
+              </select>
+            </div>
             <div class="control-group">
               <label for="dailyMinutes">Daily time</label>
               <select id="dailyMinutes">
